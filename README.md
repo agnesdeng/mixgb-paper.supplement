@@ -1,3 +1,9 @@
+# Multiple Imputation Through XGBoost
+This repository contains all supplementary materials for the following paper:
+
+Yongshi Deng, Thomas Lumley: “Multiple Imputation Through XGBoost”, 2021; <a href='http://arxiv.org/abs/2106.01574'>arXiv:2106.01574</a>.
+
+
 # misle:  Multiple imputation through statistical learning
 
 The R package `misle` currently provides three different imputers: 
