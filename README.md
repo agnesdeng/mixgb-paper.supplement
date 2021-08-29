@@ -10,9 +10,9 @@ Autoencoders imputers `mivae` and `midae` in the R package `misle` are built usi
 `misle` is still at the early stage of development so lots of work have to be done before it is officially released. 
 
 
-If users only want to use multiple imputation through XGBoost, we highly recommend to install this simplified R package `mixgb` instead. 
-
 # mixgb: Multiple imputation through XGBoost
+
+If users only want to use multiple imputation through XGBoost, we highly recommend to install this simplified R package `mixgb` instead. 
 
 ## Install `mixgb` (Highly recommend) instead of  `misle`
 ```r
