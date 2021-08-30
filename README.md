@@ -7,16 +7,16 @@ Yongshi Deng, Thomas Lumley: “Multiple Imputation Through XGBoost”, 2021; <a
 # misle:  Multiple imputation through statistical learning
 
 The R package `misle` currently provides three different imputers: 
-1. **mixgb** (multiple imputation by XGboost)
-2. **mivae** (multiple imputation by variational autoencoders)
-3. **midae** (multiple imputation by denoising autoencoders with dropout)
+1. **Mixgb** (multiple imputation by XGboost)
+2. **Mivae** (multiple imputation by variational autoencoders)
+3. **Midae** (multiple imputation by denoising autoencoders with dropout)
 
-Autoencoders imputers `mivae` and `midae` in the R package `misle` are built using TensorFlow™, which enables fast numerical computation and thus provides a solution for large-scale multiple imputation.
+Autoencoders imputers `Mivae` and `Midae` in the R package `Misle` are built using TensorFlow™, which enables fast numerical computation and thus provides a solution for large-scale multiple imputation.
 
-`misle` is still at the early stage of development so lots of work have to be done before it is officially released. 
+The R package `misle` is still at the early stage of development so lots of work have to be done before it is officially released. 
 
 
-# mixgb: Multiple imputation through XGBoost
+# R package `mixgb` : Multiple imputation through XGBoost
 
 If users only want to use multiple imputation through XGBoost, we highly recommend to install this simplified R package `mixgb` instead. 
 
@@ -51,7 +51,7 @@ Use this imputer to obtain m imputed datasets.
 ``` r
 mixgb.data<-MIXGB$impute(m=5)
 ``` 
-## Example: impute new unseen data
+### Impute new unseen data
 First we can split a dataset as training data and test data.
 ``` r
 set.seed(2021)
