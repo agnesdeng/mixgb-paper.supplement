@@ -22,7 +22,7 @@ mar.data<-function(complete.df=nwtsco,depend.on="trel"){
   #we want to fine beta0 such that prop=0.2
   beta0<-uniroot(propdiff,lower=-100,upper=100)$root
   prop(beta0)
-  
+
   logit.na<-with(complete.df,beta0+complete.df[,depend.on])
   #prob of missing
   prob.na<-exp(logit.na)/(exp(logit.na)+1)
@@ -39,14 +39,14 @@ mar.data<-function(complete.df=nwtsco,depend.on="trel"){
     #we want to find beta0 such that prop=0.2
     beta0<-uniroot(propdiff,lower=-100,upper=100)$root
     prop(beta0)
-    
+
     logit.na<-with(complete.df,beta0-complete.df[,depend.on])
     #prob of missing
     prob.na<-exp(logit.na)/(exp(logit.na)+1)
-    
+
     y.miss<-rbinom(nrow(complete.df),1,prob.na)
     complete.df[,"tumdiam"][y.miss==1]<-NA
-    
+
   complete.df
 }
 
@@ -57,11 +57,12 @@ mar.data<-function(complete.df=nwtsco,depend.on="trel"){
 withNA.df=mar.data()
 
 
+#If users only want to use multiple imputation through XGBoost, we recommend to install R package "mixgb" instead of "misle"
+#devtools::install_github("agnesdeng/mixgb")
 
-# Use mixgb in the R package "misle" to obtain 5 imputed datasets ----------------------------------
-#To properly install "misle", please check https://github.com/agnesdeng/misle 
 
-library(misle)
+#library(misle)
+library(mixgb)
 MIXGB=Mixgb$new(withNA.df,pmm.type="auto")
 mixgb.data=MIXGB$impute(m=5)
 

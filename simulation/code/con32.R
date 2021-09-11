@@ -5,11 +5,14 @@ library(MASS)
 library(mitools)
 library(mice)
 library(missRanger)
-##To properly install "misle", please check https://github.com/agnesdeng/misle 
+##To properly install "misle", please check https://github.com/agnesdeng/misle
 #library(devtools)
 #install_github("agnesdeng/misle")
-library(misle)
+#library(misle)
 
+#If users only want to use multiple imputation through XGBoost, we recommend to install R package "mixgb" instead of "misle"
+#devtools::install_github("agnesdeng/mixgb")
+library(mixgb)
 
 
 #2nd continuous generation model; medium effect size; create 20% MCAR in x3 and x8 and create 20% MAR in Y (depends on x9 and x10)

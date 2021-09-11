@@ -5,10 +5,14 @@ library(MASS)
 library(mitools)
 library(mice)
 library(missRanger)
-##To properly install "misle", please check https://github.com/agnesdeng/misle 
+##To properly install "misle", please check https://github.com/agnesdeng/misle
 #library(devtools)
 #install_github("agnesdeng/misle")
-library(misle)
+#library(misle)
+
+#If users only want to use multiple imputation through XGBoost, we recommend to install R package "mixgb" instead of "misle"
+#devtools::install_github("agnesdeng/mixgb")
+library(mixgb)
 
 
 
